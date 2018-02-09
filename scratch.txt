@@ -1,0 +1,12 @@
+Each player has a'turn'. (alternating) ie blue then red.
+On a row click that triggers a handler that 'inserts' a piece for the current player. Essentially is a toggle of the div color.
+
+Maybe the check could run pre turn?
+Each row can have a counter to keep track of which place gets colored.
+on a click the counter would increment and drop in a piece accordingly.
+
+After each turn the whole board needs to be scanned for possible 'connect fours'.
+
+EXTRA!
+**maybe there can be a coin toss to decide who goes first?
+**maybe they can pick their color on start?
