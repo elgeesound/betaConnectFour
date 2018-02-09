@@ -97,12 +97,17 @@ const checkDiagonalTwo = (arr) => {
 const checkBoard = (arr) => {
   // change possible to false which denotes a tie
   let possible = true;
+  let horizontalCheck = '';
+
   arr.forEach((row) => {
-    let checkH = checkHorizontal(row);
-    if (checkH === 'Yellow Wins' || checkH === 'Red Wins') {
-      return checkH;
+    if (checkHorizontal(row) === 'Yellow Wins' || checkHorizontal(row) === 'Red Wins') {
+      horizontalCheck = checkHorizontal(row);
     }
   });
+
+  if (horizontalCheck === 'Yellow Wins' || horizontalCheck === 'Red Wins') {
+    return horizontalCheck;
+  };
 
   if (checkVertical(arr) === 'Yellow Wins' || checkVertical(arr) === 'Red Wins') {
     return checkVertical(arr);
